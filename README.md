@@ -46,4 +46,4 @@ By default it uses PPO to solve the tasks. To change the algorithm to DQN just o
  ```
  python TrainingAndRunningGail.py
  ```
- in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. 
+ in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. GAIL takes about 5 hours to train on my computer and only works for task 2. I would be interested if others could get it working for more diffult tasks. 
