@@ -1,5 +1,6 @@
 # Deep_Learning_For_Robot_Navigation
-Test PPO, DQN and GAIL using a simulated environment with a husky robot, obstacles and a goal. There are 5 different task difficulty levels that a model can be trained on. The tasks are described bellow: 
+See https://stable-baselines.readthedocs.io/en/master/ for the algorithm implentations used for PPO, DQN and GAIL.
+Allows testing of PPO, DQN and GAIL using a simulated environment with a husky robot, obstacles and a goal. There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below: 
 1. Task 1 involves a static husksy starting position and a fixed goal position.
 2. Task 2 involves a random husky starting orientation and a random goal position.
 3. Task 3 involves a random husky orientation and 1 obstacle between the husky and the goal (that is randomly positioned).
@@ -37,5 +38,10 @@ python Running_A_Saved_Model.py [task number e.g., 2]
 ```
 ensure that the task number is the same for both training and running 
 
-# Changing the algorithm to DQN and PPO
-To change the algorithm just open both the TrainHuskyRL.py and the Running_A_Saved_Model.py and change the parameters that are being passed into the main methods
+# Changing the algorithm to DQN and GAIL
+By default it uses PPO to solve the tasks. To change the algorithm to DQN just open both the TrainHuskyRL.py and the Running_A_Saved_Model.py and change the parameters that are being passed into the main methods.
+ To use GAIL run the following command:
+ ```
+ python TrainingAndRunningGail.py
+ ```
+ in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. 
