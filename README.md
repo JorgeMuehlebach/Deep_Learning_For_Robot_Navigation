@@ -1,5 +1,7 @@
 # Deep_Learning_For_Robot_Navigation
 See https://stable-baselines.readthedocs.io/en/master/ for the algorithm implentations used for PPO, DQN and GAIL.
+
+
 Allows testing of PPO, DQN and GAIL using a simulated environment with a husky robot, obstacles and a goal. There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below: 
 1. Task 1 involves a static husksy starting position and a fixed goal position.
 2. Task 2 involves a random husky starting orientation and a random goal position.
