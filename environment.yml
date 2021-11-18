@@ -1,4 +1,4 @@
-name: TestStableBaselines
+name: RobotNavigationML
 channels:
   - defaults
 dependencies:
