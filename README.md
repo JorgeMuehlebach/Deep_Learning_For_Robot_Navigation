@@ -9,6 +9,12 @@ Allows testing of PPO, DQN and GAIL using a simulated environment with a husky r
 4. Task 4 involves a random husky orientation and a wall in between the husky and the goal.
 5. Task 5 involves a random husky orientation and n randomly positioned obstacles. 
 
+You can have a look at the tasks by running the husky_env.py file after you have completed the installation process with:
+```
+python husky_env.py [task number e.g., 5]
+```
+you can use the arrow keys to move around the environment as well. 
+
 # installation
 - ensure you have conda installed, see: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
