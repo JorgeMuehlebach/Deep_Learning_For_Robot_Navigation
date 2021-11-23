@@ -16,6 +16,24 @@ python husky_env.py [task number e.g., 5]
 you can use the arrow keys to move around the environment as well. 
 
 # installation
+
+## Tested version
+This repository tested with the following versions and it's not guaranteed to work with other versions.
+
+| Software | Version |
+| --- | --- |
+| Ubuntu | 18.04.5 LTS |
+| Linux Kernel | 5.4.0-65-generic |
+| OpenAI gym | 0.18.3|
+| Stable-baselines | 2.10.2 |
+| OpenAI gym | 0.18.0 |
+| Python | 3.7.10 |
+| PyBullet | 3.1.7 |
+| Tensorflow | 1.15.0 |
+| Tensorboard | 1.15.0 |
+
+Detail package version information can be found from [environment.yml](environment.yml)
+
 - ensure you have conda installed, see: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
 clone the repo: 
