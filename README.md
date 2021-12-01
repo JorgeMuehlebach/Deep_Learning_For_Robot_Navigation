@@ -84,7 +84,7 @@ python Running_A_Saved_Model.py [task number e.g., 2]
 ```
 ensure that the task number is the same for both training and running 
 
-# Changing the algorithm to DQN and GAIL
+# Changing the algorithm to DQN and PPO
 By default it uses PPO to solve the tasks. To change the algorithm to DQN just open both the TrainHuskyRL.py and the Running_A_Saved_Model.py and change the parameters that are being passed into the main methods.
  To use GAIL run the following command:
  ```
