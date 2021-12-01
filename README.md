@@ -41,16 +41,36 @@ clone the repo:
 git clone https://github.com/JorgeMuehlebach/Deep_Learning_For_Robot_Navigation.git
 ```
 
+Create a conda environment with python3.7
+
+```
+conda create --name RobotNavigationML python=3.7
+```
+
+and activate the conda environment:
+
+```
+conda activate RobotNavigationML
+```
+(Note that `RobotNavigationML` is prefixed in your terminal console (e.g., `(RobotNavigationML) username$path` which means the conda env is activated and all packages will be installed in that env)
+
+manually install packages
+```
+pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 (more packages will be added)
+```
+
+Optionally one can also use [environment.yml](environment.yml) to create a conda environment (with your own risk) as follow:
+
 Create a conda environment using the environment.yml file 
 ```
 conda env create -f environment.yml
 ```
 
-activate the conda environment:
-```
-conda activate RobotNavigationML
-```
 # START TRAINING!
+
+```
+cd src
+```
 
 ```
 python TrainHuskyRL.py [task number e.g., 2]
