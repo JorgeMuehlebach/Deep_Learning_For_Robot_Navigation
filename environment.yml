@@ -75,4 +75,4 @@ dependencies:
     - werkzeug==2.0.1
     - wrapt==1.12.1
     - zipp==3.4.1
-prefix: /home/mue023/anaconda3/envs/TestStableBaselines
+prefix: /home/mue023/anaconda3/envs/RobotNavigationML
