@@ -8,7 +8,6 @@ from gym import spaces
 import math
 import random
 import sys
-sys.path.append("/home/mue023/Documents/pybullet/IRL_autonomous_car/CustomGymEnvs")
 from HuskyInput import HuskyInputController 
 from gym.utils import seeding
 import math 
