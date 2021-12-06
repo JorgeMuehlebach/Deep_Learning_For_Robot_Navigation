@@ -68,9 +68,16 @@ conda env create -f environment.yml
 
 # START TRAINING!
 
+As shown below, we provide 5 environments with varying level of diffculties (e.g., 1 is easiest and 5 is the most difficult). 
+
+<img src="./assets/tasks.jpg" height=600>
+
+
 ```
 (RobotNavigationML)cd src
 ```
+
+You can easily choose one of them by just changing task number.
 
 ```
 (RobotNavigationML)python TrainHuskyRL.py [task number e.g., 2]
