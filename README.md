@@ -56,7 +56,7 @@ conda activate RobotNavigationML
 
 manually install packages
 ```
-pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 pynput pandas stable_baselines=2.10.2
+(RobotNavigationML)pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 pynput pandas stable_baselines=2.10.2
 ```
 
 Optionally one can also use [environment.yml](environment.yml) to create a conda environment (with your own risk) as follow:
@@ -69,11 +69,11 @@ conda env create -f environment.yml
 # START TRAINING!
 
 ```
-cd src
+(RobotNavigationML)cd src
 ```
 
 ```
-python TrainHuskyRL.py [task number e.g., 2]
+(RobotNavigationML)python TrainHuskyRL.py [task number e.g., 2]
 ```
 As the model is training, information about its progress will be printed to the console as shown below.
 
@@ -81,7 +81,7 @@ As the model is training, information about its progress will be printed to the 
 
 
 
-Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to A (capital A), so pressing A will save the model to the results folder. There will also be data related to training saved to the stats file that can be used at your discretion. I personally used excel to make some fancy graphs to show how the success rate and reward increased throughout training. 
+Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to `A` (capital A), so pressing `A` will save the model to the results folder. There will also be data related to training saved to the stats file that can be used at your discretion. I personally used excel to make some fancy graphs to show how the success rate and reward increased throughout training. 
 
 # Run the model
 Show the husky completing the task you just trained it to complete by running the following command
@@ -96,4 +96,22 @@ By default it uses PPO to solve the tasks. To change the algorithm to DQN just o
  ```
  python TrainingAndRunningGail.py
  ```
- in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. GAIL takes about 5 hours to train on my computer and only works for task 2. I would be interested if others could get it working for more diffult tasks. 
+ in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. GAIL takes about 5 hours to train on my computer and only works for task 2. I would be interested if others could get it working for more diffult tasks.
+ 
+
+# Publication
+
+If our work helps your works in an academic/research context, please consider to cite the following publication:
+
+* Jorge Alfred Muehlebach, **"Deep Learning Neural Networks for Mobile Robot Navigation"**, 2021, Bachelor thesis, the University of Queensland. ([PDF](https://arxiv.org/link))
+
+```bibtex
+@inproceedings{jorge2021rl-navigation,
+  title={Deep Learning Neural Networks for Mobile Robot Navigation},
+  author={Jorge Alfred Muehlebach},
+  booktitle={Bachelor thesis},
+  year={2021},
+  organization={the University of Queensland}
+}
+```
+
