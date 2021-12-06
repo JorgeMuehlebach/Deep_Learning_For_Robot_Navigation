@@ -56,7 +56,7 @@ conda activate RobotNavigationML
 
 manually install packages
 ```
-pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 (more packages will be added)
+pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 pynput pandas stable_baselines=2.10.2
 ```
 
 Optionally one can also use [environment.yml](environment.yml) to create a conda environment (with your own risk) as follow:
@@ -75,7 +75,13 @@ cd src
 ```
 python TrainHuskyRL.py [task number e.g., 2]
 ```
-As the model is training, information about its progress will be printed to the console. Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to A (capital A), so pressing A will save the model to the results folder. There will also be data related to training saved to the stats file that can be used at your discretion. I personally used excel to make some fancy graphs to show how the success rate and reward increased throughout training. 
+As the model is training, information about its progress will be printed to the console as shown below.
+
+<img src="./assets/console.png" height=400>
+
+
+
+Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to A (capital A), so pressing A will save the model to the results folder. There will also be data related to training saved to the stats file that can be used at your discretion. I personally used excel to make some fancy graphs to show how the success rate and reward increased throughout training. 
 
 # Run the model
 Show the husky completing the task you just trained it to complete by running the following command
