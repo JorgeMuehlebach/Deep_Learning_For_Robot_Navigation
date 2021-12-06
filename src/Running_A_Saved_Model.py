@@ -43,4 +43,4 @@ if __name__ == '__main__':
     # can also be set with a command line argument
     if len(sys.argv) > 1 and sys.argv[1].isnumeric():
         stage=int(sys.argv[1])
-    main(model_type="PPO2", trial_letter = "A", stage=stage, num_steps=50000)
+    main(model_type="PPO2", trial_letter = "F", stage=stage, num_steps=50000)
