@@ -77,7 +77,7 @@ conda env create -f environment.yml
 ```
 As the model is training, information about its progress will be printed to the console as shown below.
 
-<img src="./assets/console.png" height=400>
+<img src="./assets/console.png" height=600>
 
 
 
