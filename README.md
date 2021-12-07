@@ -88,7 +88,12 @@ As the model is training, information about its progress will be printed to the 
 
 
 
-Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to `A` (capital A), so pressing `A` will save the model to the results folder. There will also be data related to training saved to the stats file that can be used at your discretion. I personally used excel to make some fancy graphs to show how the success rate and reward increased throughout training. 
+Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop the training and save the model by entering the trial letter. The trial letter by default is set to `A` (capital A), so pressing `A` will save the model to the results folder (e.g., `src/results/Husky_resultA.zip`). 
+
+There will also be data related to training saved to the stats file that can be used at your discretion. You can plot the results with any convient plotting tools, here we share some sample results plot that shows how the success rate and reward increased throughout training using [Google sheet](https://docs.google.com/spreadsheets/d/1e2fM4iarxzmstk_c3jr3W_83TRPD5mqlknwlM9f07PQ/edit?usp=sharing).
+
+<img src="./assets/task1_results_plot.png" height=600> 
+
 
 # Run the model
 Show the husky completing the task you just trained it to complete by running the following command
