@@ -30,7 +30,7 @@ def main(dqn=False, ppo2=False, continue_training=False, stage=5):
       that has already been trained somewhat, ensure that the model was using the same env. Defaults to False.
       stage (integer, optional): (difficulty level) see the readme
   """
-  trial_letter = 'A'
+  trial_letter = 'F'
   if ppo2:
     env = make_vec_env(Husky, n_envs=1, env_kwargs={'debug':False, 'renders':False, 'isDiscrete':False, 'stage':stage})
   else:
@@ -62,5 +62,4 @@ if __name__ == '__main__':
         stage=int(sys.argv[1])
     # by typing this character into the terminal while the the training is occuring
     # it will stop the training and save the model with the name Husky_result_[trial_letter]
-    trial_letter = 'A'
     main(dqn=False, ppo2=True, continue_training=False, stage=stage)

@@ -298,7 +298,7 @@ class Husky(gym.Env):
         action_smoothness_reward = (-1/(math.sqrt(2)))*action_difference + 1
         self.smoothness_reward = action_smoothness_reward
 
-        coef_distance, coef_angle, coef_obstacle_proximity, coef_smoothness = 2, 1, 0, 0
+        coef_distance, coef_angle, coef_obstacle_proximity, coef_smoothness = 2, 1, 1, 0.00001
         reward = coef_distance*distance_cost + coef_angle*angle_cost + coef_obstacle_proximity*too_close_reward + coef_smoothness*action_smoothness_reward
         reward_normalised = reward/(coef_distance + coef_angle + coef_obstacle_proximity + coef_smoothness)
         if self.in_goal():
@@ -319,7 +319,7 @@ class Husky(gym.Env):
         for ray in self.ray_obs:
             if ray < closest_obstacle:
                 closest_obstacle = ray
-        if closest_obstacle < 0.09:
+        if closest_obstacle < 0.06:
             end = time.time()
             return True
         else:
@@ -361,7 +361,8 @@ class Husky(gym.Env):
     def is_done(self):
         huskyPos, orn =self._p.getBasePositionAndOrientation(self.husky)
         distance_from_origin = math.sqrt(huskyPos[0]**2 + huskyPos[1]**2)
-        if self.collided() or self.envStepCounter > 20000 or distance_from_origin > 20 or (self.terminate_upon_reaching_the_goal and self.in_goal()):
+        # was 20000
+        if self.collided() or self.envStepCounter > 30000 or distance_from_origin > 20 or (self.terminate_upon_reaching_the_goal and self.in_goal()):
             if self.failed():
                 # printed if the huksy hits an obstacle or goes out of bounds
                 print("FAILED")
