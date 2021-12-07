@@ -1,8 +1,17 @@
 # Deep_Learning_For_Robot_Navigation
-See https://stable-baselines.readthedocs.io/en/master/ for the algorithm implentations used for PPO, DQN and GAIL.
 
+Mobile robot navigation has many real-world use cases including disaster relief, rescue and patrolling. Traditional heuristic based mobile robot navigation methods
+have many limitations, providing a motivation to seek alternative approaches. 
 
-Allows testing of PPO, DQN and GAIL using a simulated environment with a husky robot, obstacles and a goal. There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below: 
+This project aims **to determine whether deep learning neural networks can be used to effectively solve mobile robot navigation tasks**. Using a Husky robot in a simulated environment three state of the art deep learning techniques were evaluated using navigation tasks with varying degrees of difficulty. 
+
+The approach of using 5 stages of task difficulty was highly successful in implementing and evaluating both Deep Q Learning (DQN) and Proximal Policy Optimisation (PPO). The reward shaping process produced a reward function that allowed the Husky to solve complex navigation tasks using such algorithms. PPO was identified as the most suitable deep learning algorithm due to its superior convergence time.
+
+## Simulated environments
+There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below:
+
+<img src="./assets/tasks.jpg" height=600>
+
 1. Task 1 involves a static husksy starting position and a fixed goal position.
 2. Task 2 involves a random husky starting orientation and a random goal position.
 3. Task 3 involves a random husky orientation and 1 obstacle between the husky and the goal (that is randomly positioned).
@@ -15,7 +24,7 @@ python husky_env.py [task number e.g., 5]
 ```
 you can use the arrow keys to move around the environment as well. 
 
-# installation
+# Installation
 
 ## Tested version
 This repository tested with the following versions and it's not guaranteed to work with other versions.
@@ -68,10 +77,7 @@ conda env create -f environment.yml
 
 # START TRAINING!
 
-As shown below, we provide 5 environments with varying level of diffculties (e.g., 1 is easiest and 5 is the most difficult). 
-
-<img src="./assets/tasks.jpg" height=600>
-
+As shown above, we provide 5 environments with varying level of diffculties (e.g., 1 is easiest and 5 is the most difficult). 
 
 ```
 (RobotNavigationML)cd src
@@ -109,7 +115,9 @@ By default it uses PPO to solve the tasks. To change the algorithm to DQN just o
  python TrainingAndRunningGail.py
  ```
  in order for this command to work you must have an already trained model available for the task you wish to train it on. Then you must go into the TrainingAndRunningGail.py file and modify the path to that file along with which task difficulty it is. GAIL takes about 5 hours to train on my computer and only works for task 2. I would be interested if others could get it working for more diffult tasks.
- 
+
+See https://stable-baselines.readthedocs.io/en/master/ for the algorithm implentations used for PPO, DQN and GAIL.
+
 
 # Publication
 
