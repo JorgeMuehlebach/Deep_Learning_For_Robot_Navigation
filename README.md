@@ -10,7 +10,9 @@ The approach of using 5 stages of task difficulty was highly successful in imple
 ## Simulated environments
 There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below:
 
-<img src="./assets/tasks.jpg" height=600>
+<p align="center">
+ <img src="./assets/tasks.jpg" width=800>
+</p>
 
 1. Task 1 involves a static husksy starting position and a fixed goal position.
 2. Task 2 involves a random husky starting orientation and a random goal position.
@@ -141,7 +143,9 @@ Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop th
 
 There will also be data related to training saved to the stats file that can be used at your discretion. You can plot the results with any convient plotting tools, here we share some sample results plot that shows how the success rate and reward increased throughout training using [Google sheet](https://docs.google.com/spreadsheets/d/1e2fM4iarxzmstk_c3jr3W_83TRPD5mqlknwlM9f07PQ/edit?usp=sharing).
 
-<img src="./assets/task1_results_plot.png" height=600> 
+<p align="center">
+<img src="./assets/task1_results_plot.png" width=600>
+</p>
 
 
 # Run the model
