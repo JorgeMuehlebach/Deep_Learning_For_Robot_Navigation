@@ -90,7 +90,50 @@ You can easily choose one of them by just changing task number.
 ```
 As the model is training, information about its progress will be printed to the console as shown below.
 
-<img src="./assets/console.png" height=600>
+```bash
+episodes: 1
+stopping character:  F
+this episodes reward:  -88.36766625460058
+avg episode reward:  -88.36766625460058
+success rate:  0.0
+--------------------------------------
+| approxkl           | 0.0010377939  |
+| clipfrac           | 0.0           |
+| ep_len_mean        | 42            |
+| ep_reward_mean     | -88.4         |
+| explained_variance | -0.0282       |
+| fps                | 83            |
+| n_updates          | 1             |
+| policy_entropy     | 2.8380501     |
+| policy_loss        | -0.0049219145 |
+| serial_timesteps   | 128           |
+| time_elapsed       | 1.03e-05      |
+| total_timesteps    | 128           |
+| value_loss         | 319.33267     |
+--------------------------------------
+---------------------------------------
+| approxkl           | 0.00045663456  |
+| clipfrac           | 0.0            |
+| ep_len_mean        | 42             |
+| ep_reward_mean     | -88.4          |
+| explained_variance | -0.0344        |
+| fps                | 102            |
+| n_updates          | 2              |
+| policy_entropy     | 2.8383286      |
+| policy_loss        | -0.00031569728 |
+| serial_timesteps   | 256            |
+| time_elapsed       | 1.53           |
+| total_timesteps    | 256            |
+| value_loss         | 2.78138        |
+---------------------------------------
+FAILED
+episodes: 2
+stopping character:  F
+this episodes reward:  -43.50275077217358
+avg episode reward:  -65.93520851338708
+success rate:  0.0
+...
+```
 
 
 
