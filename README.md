@@ -70,13 +70,6 @@ manually install packages
 (RobotNavigationML)pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 pynput pandas stable_baselines=2.10.2
 ```
 
-Optionally one can also use [environment.yml](environment.yml) to create a conda environment (with your own risk) as follow:
-
-Create a conda environment using the environment.yml file 
-```
-conda env create -f environment.yml
-```
-
 # START TRAINING!
 
 As shown above, we provide 5 environments with varying level of diffculties (e.g., 1 is easiest and 5 is the most difficult). 
