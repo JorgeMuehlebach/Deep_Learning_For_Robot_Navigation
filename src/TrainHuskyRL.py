@@ -62,4 +62,5 @@ if __name__ == '__main__':
         stage=int(sys.argv[1])
     # by typing this character into the terminal while the the training is occuring
     # it will stop the training and save the model with the name Husky_result_[trial_letter]
+    os.makedirs("results", exist_ok=True)
     main(dqn=False, ppo2=True, continue_training=False, stage=stage)

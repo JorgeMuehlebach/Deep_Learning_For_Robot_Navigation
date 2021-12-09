@@ -10,7 +10,9 @@ The approach of using 5 stages of task difficulty was highly successful in imple
 ## Simulated environments
 There are 5 different navigation task difficulty levels that a model can be trained on. The tasks are described below:
 
-<img src="./assets/tasks.jpg" height=600>
+<p align="center">
+ <img src="./assets/tasks.jpg" width=800>
+</p>
 
 1. Task 1 involves a static husksy starting position and a fixed goal position.
 2. Task 2 involves a random husky starting orientation and a random goal position.
@@ -68,13 +70,6 @@ manually install packages
 (RobotNavigationML)pip install pybullet==3.1.7 tensorflow==1.15.0 gym==0.18.3 pynput pandas stable_baselines=2.10.2
 ```
 
-Optionally one can also use [environment.yml](environment.yml) to create a conda environment (with your own risk) as follow:
-
-Create a conda environment using the environment.yml file 
-```
-conda env create -f environment.yml
-```
-
 # START TRAINING!
 
 As shown above, we provide 5 environments with varying level of diffculties (e.g., 1 is easiest and 5 is the most difficult). 
@@ -90,7 +85,50 @@ You can easily choose one of them by just changing task number.
 ```
 As the model is training, information about its progress will be printed to the console as shown below.
 
-<img src="./assets/console.png" height=600>
+```bash
+episodes: 1
+stopping character:  F
+this episodes reward:  -88.36766625460058
+avg episode reward:  -88.36766625460058
+success rate:  0.0
+--------------------------------------
+| approxkl           | 0.0010377939  |
+| clipfrac           | 0.0           |
+| ep_len_mean        | 42            |
+| ep_reward_mean     | -88.4         |
+| explained_variance | -0.0282       |
+| fps                | 83            |
+| n_updates          | 1             |
+| policy_entropy     | 2.8380501     |
+| policy_loss        | -0.0049219145 |
+| serial_timesteps   | 128           |
+| time_elapsed       | 1.03e-05      |
+| total_timesteps    | 128           |
+| value_loss         | 319.33267     |
+--------------------------------------
+---------------------------------------
+| approxkl           | 0.00045663456  |
+| clipfrac           | 0.0            |
+| ep_len_mean        | 42             |
+| ep_reward_mean     | -88.4          |
+| explained_variance | -0.0344        |
+| fps                | 102            |
+| n_updates          | 2              |
+| policy_entropy     | 2.8383286      |
+| policy_loss        | -0.00031569728 |
+| serial_timesteps   | 256            |
+| time_elapsed       | 1.53           |
+| total_timesteps    | 256            |
+| value_loss         | 2.78138        |
+---------------------------------------
+FAILED
+episodes: 2
+stopping character:  F
+this episodes reward:  -43.50275077217358
+avg episode reward:  -65.93520851338708
+success rate:  0.0
+...
+```
 
 
 
@@ -98,7 +136,9 @@ Once it has trained sufficiently (e.g., success rate: 0.95) then you can stop th
 
 There will also be data related to training saved to the stats file that can be used at your discretion. You can plot the results with any convient plotting tools, here we share some sample results plot that shows how the success rate and reward increased throughout training using [Google sheet](https://docs.google.com/spreadsheets/d/1e2fM4iarxzmstk_c3jr3W_83TRPD5mqlknwlM9f07PQ/edit?usp=sharing).
 
-<img src="./assets/task1_results_plot.png" height=600> 
+<p align="center">
+<img src="./assets/task1_results_plot.png" width=600>
+</p>
 
 
 # Run the model
